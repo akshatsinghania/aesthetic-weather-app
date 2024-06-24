@@ -33,5 +33,20 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const apiKey = "21af69caa6ad3d0ac8d6958f2afd7836";
+      const apiUrl =
+        "https://api.openweathermap.org/data/2.5/weather?=&units=metric&q=jaipur";
+
+      async function checkWeather() {
+        const response = await fetch(apiUrl + `&appid=${apiKey}`);
+        var data = await response.json();
+
+        console.log(data);
+      }
+
+      checkWeather();
+    </script>
   </body>
 </html>
